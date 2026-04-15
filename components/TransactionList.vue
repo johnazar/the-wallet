@@ -41,6 +41,7 @@ const txs = useTransactions()
 const accounts = useAccounts()
 const categories = useCategories()
 const auth = useAuthStore()
+const transactions = txs.transactions
 
 const showForm = ref(false)
 const editing = ref(null)
