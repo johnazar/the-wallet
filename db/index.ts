@@ -1,4 +1,5 @@
-import Dexie, { Table } from 'dexie'
+import Dexie from 'dexie'
+import type { Table } from 'dexie'
 import type { User, Account, Category, Transaction } from '../types'
 
 export class WalletDB extends Dexie {
