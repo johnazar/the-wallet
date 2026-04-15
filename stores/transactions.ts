@@ -7,7 +7,13 @@ export const useTransactionsStore = defineStore('transactions', () => {
   const transactions = ref<Transaction[]>([])
 
   async function loadForUser(userId: number, limit = 100, sortBy: 'date' | 'amount' = 'date', desc = true) {
+    // Try by index first (fast). If no results, fall back to scanning and loose-matching to handle
+    // possible type mismatches (e.g., stored userId as string).
     let arr = await db.transactions.where('userId').equals(userId).toArray()
+    if (!arr.length) {
+      const all = await db.transactions.toArray()
+      arr = all.filter((t) => t.userId === userId || String(t.userId) === String(userId))
+    }
     arr.sort((a, b) => {
       if (sortBy === 'date') return desc ? b.date - a.date : a.date - b.date
       return desc ? b.amountCents - a.amountCents : a.amountCents - b.amountCents

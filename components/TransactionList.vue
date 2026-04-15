@@ -9,7 +9,9 @@
 
     <TransactionForm v-if="showForm" :transaction="editing" @saved="onSaved" @close="closeForm" />
 
-    <ul class="space-y-2">
+    <div v-if="transactions && transactions.length === 0" class="text-sm text-gray-500 p-4 bg-white rounded shadow">No transactions yet.</div>
+
+    <ul v-else class="space-y-2">
       <li v-for="t in transactions" :key="t.id" class="flex items-center justify-between bg-white p-3 rounded shadow">
         <div>
           <div class="text-sm font-medium">{{ formatDate(t.date) }} — {{ t.note || '-' }}</div>

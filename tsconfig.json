@@ -11,7 +11,8 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["@types/node", "vite/client", "nuxt/schema"]
+    "types": ["@types/node", "vite/client", "nuxt/schema", "unplugin-vue-router/client"]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "extends": "./.nuxt/tsconfig.json"
 }

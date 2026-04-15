@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-4 max-w-md mx-auto">
+  <div class="bg-gray-50 p-4 max-w-md mx-auto">
     <main>
       <section>
         <div class="bg-white shadow rounded p-4">

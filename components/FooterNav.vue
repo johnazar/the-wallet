@@ -9,14 +9,13 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-
 const route = useRoute()
 
 const links = [
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/transactions', label: 'Transactions' },
   { to: '/reports', label: 'Reports' },
+  { to: '/categories', label: 'Categories' },
   { to: '/accounts', label: 'Accounts' }
 ]
 
