@@ -3,11 +3,15 @@
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "Node",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
     "strict": true,
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["@types/node", "vite/client"]
+    "types": ["@types/node", "vite/client", "nuxt/schema"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
