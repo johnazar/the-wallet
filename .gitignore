@@ -1,6 +1,7 @@
 # Vite/React build outputs
 dist
 dist-ssr
+release
 .cache
 
 # Node dependencies
