@@ -1,0 +1,6 @@
+{
+  "name": "The Wallet",
+  "description": "A private, offline-first personal finance tracker built with IndexedDB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
