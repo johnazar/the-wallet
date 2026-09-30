@@ -12,12 +12,12 @@ export default defineConfig(({ mode }) => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
-        includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+        includeAssets: ['favicon.ico', 'favicon.svg', 'apple-touch-icon.png'],
         manifest: {
           name: 'The Wallet',
           short_name: 'The Wallet',
           description: 'Private offline budget tracker',
-          theme_color: '#ffffff',
+          theme_color: '#4f46e5',
           icons: [
             {
               src: 'pwa-192x192.png',
